@@ -6,11 +6,11 @@
 # Replace database driver gem with activerecord-jbdbc-adapter
 case options[:database]
 when "sqlite3"
-  gsub_file "Gemfile", /gem "sqlite3".*$/, 'gem "activerecord-jdbcsqlite3-adapter", "80.0.pre1"'
+  gsub_file "Gemfile", /gem "sqlite3".*$/, 'gem "activerecord-jdbcsqlite3-adapter", "72.1"'
 when "mysql"
-  gsub_file "Gemfile", /gem "mysql2".*$/, 'gem "activerecord-jdbcmysql-adapter", "80.0.pre1"'
+  gsub_file "Gemfile", /gem "mysql2".*$/, 'gem "activerecord-jdbcmysql-adapter", "72.1"'
 when "postgresql"
-  gsub_file "Gemfile", /gem "pg".*$/, 'gem "activerecord-jdbcpostgresql-adapter", "80.0.pre1"'
+  gsub_file "Gemfile", /gem "pg".*$/, 'gem "activerecord-jdbcpostgresql-adapter", "72.1"'
 else
   say "Unsupported database: #{options[:database]}", :red
   exit 1
