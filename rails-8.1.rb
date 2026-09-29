@@ -16,6 +16,9 @@ else
   exit 1
 end
 
+# Use beta of bcrypt_pbkdf for JRuby
+gem "bcrypt_pbkdf", "1.2.0.beta1"
+
 after_bundle do
   say "Gemfile customized for JDBC and dependencies bundled successfully!", :green
 end
