@@ -3,7 +3,7 @@
 # 1. We let Rails generate the default Gemfile first.
 # 2. We use an after_bundle block or direct manipulation to swap it before bundling completes.
 
-# Replace database driver gem with activerecord-jbdbc-adapter
+# Replace database driver gem with activerecord-jdbc-adapter
 case options[:database]
 when "sqlite3"
   gsub_file "Gemfile", /gem "sqlite3".*$/, 'gem "activerecord-jdbcsqlite3-adapter", "81.0.pre1"'
